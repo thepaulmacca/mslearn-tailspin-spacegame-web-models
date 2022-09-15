@@ -11,14 +11,11 @@ steps:
   inputs:
     version: '$(dotnetSdkVersion)'
 
-- bash: dotnet restore '**/*.csproj'
-  displayName: Restore project dependencies
-
-# - task: DotNetCoreCLI@2
-#   displayName: 'Restore project dependencies'
-#   inputs:
-#     command: 'restore'
-#     projects: '**/*.csproj'
+- task: DotNetCoreCLI@2
+  displayName: 'Restore project dependencies'
+  inputs:
+    command: 'restore'
+    projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'

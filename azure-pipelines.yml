@@ -12,7 +12,7 @@ steps:
     version: '$(dotnetSdkVersion)'
 
 - bash: dotnet restore Tailspin.SpaceGame.Web.Models
-  displayName: Dotnet restore
+  displayName: Restore project dependencies
 
 # - task: DotNetCoreCLI@2
 #   displayName: 'Restore project dependencies'

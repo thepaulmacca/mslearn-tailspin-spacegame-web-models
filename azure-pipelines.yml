@@ -11,7 +11,7 @@ steps:
   inputs:
     version: '$(dotnetSdkVersion)'
 
-- bash: dotnet restore Tailspin.SpaceGame.Web.Models
+- script: dotnet restore Tailspin.SpaceGame.Web.Models
   displayName: Restore project dependencies
 
 # - task: DotNetCoreCLI@2
@@ -20,7 +20,7 @@ steps:
 #     command: 'restore'
 #     projects: '**/*.csproj'
 
-- bash: dotnet build Tailspin.SpaceGame.Web.Models --no-restore --configuration $(buildConfiguration)
+- script: dotnet build Tailspin.SpaceGame.Web.Models --no-restore --configuration $(buildConfiguration)
   displayName: Build the project - $(buildConfiguration)
 
 # - task: DotNetCoreCLI@2
